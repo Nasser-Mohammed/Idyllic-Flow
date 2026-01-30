@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #05060a;
+  font-family: system-ui, sans-serif;
+  overflow: hidden;
+}
+
+/* =========================
+   Control Panel
+========================= */
+
+#control-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 18, 30, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 10;
+  transition: transform 0.25s ease;
+}
+
+#control-panel.closed {
+  transform: translateY(-100%);
+}
+
+.panel-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+}
+
+/* Buttons */
+
+button {
+  background: #222633;
+  color: #eaeaf0;
+  border: none;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #2f3550;
+}
+
+#toggle-panel {
+  font-size: 12px;
+  padding: 6px 8px;
+}
+
+/* Dropdown */
+
+label {
+  color: #cfd3ff;
+  font-size: 14px;
+}
+
+select {
+  margin-left: 6px;
+  background: #1a1e2d;
+  color: #eaeaf0;
+  border: 1px solid #333a5c;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+/* =========================
+   Canvas Viewport
+========================= */
+
+.viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+}

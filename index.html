@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flow Garden</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Control Panel -->
+  <div id="control-panel" class="open">
+    <div class="panel-row">
+      <button id="toggle-panel">▲</button>
+
+      <button id="start-simulation">Initiate System</button>
+      <button id="reset-global">Reset</button>
+
+      <label>
+        Flow:
+        <select id="flow-select">
+          <option value="cellular">Cellular</option>
+          <option value="meandering">Meandering</option>
+          <option value="shear">Shear</option>
+          <option value="quasiperiodic">Quasi-periodic</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <!-- Canvas Viewport -->
+  <div class="viewport">
+    <canvas id="simCanvas"></canvas>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
